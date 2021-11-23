@@ -13,10 +13,10 @@ public class PlayerController : MonoBehaviour
     {
         // Movement
         Vector3 playerTransform = transform.position;
-        playerTransform.x += Input.GetAxisRaw("Horizontal");
-        playerTransform.y += Input.GetAxisRaw("Vertical");
-        playerTransform.x = Mathf.Clamp(playerTransform.x, -1f, 5.5f);
-        playerTransform.y = Mathf.Clamp(playerTransform.y, - 4.5f, 4.5f);
+        playerTransform.x += Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime;
+        playerTransform.y += Input.GetAxisRaw("Vertical") * speed * Time.deltaTime;
+        playerTransform.x = Mathf.Clamp(playerTransform.x, -1.1f, 4.15f);
+        playerTransform.y = Mathf.Clamp(playerTransform.y, -3.1f, 3.1f);
         transform.position = playerTransform;
     }
     #endregion

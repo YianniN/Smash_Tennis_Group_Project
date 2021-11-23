@@ -5,8 +5,6 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     #region Variables
-    [SerializeField] GameObject player;
-    [SerializeField] GameObject opponent;
     [SerializeField] float speed;
     float playerVelocity;
     #endregion
@@ -15,15 +13,16 @@ public class BallController : MonoBehaviour
     void Update()
     {
         // Move the ball
-        transform.position += transform.forward * speed * Time.deltaTime;
+        transform.position += transform.right * speed * Time.deltaTime;
     }
     #endregion
 
     #region OnCollisionEnter2D
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("COLLIDED");
         // If the ball collides with a character
-        if (collision.gameObject == player)
+        if (collision.gameObject.tag == "Character")
         {
             // Add player velocity and a random value to the ball rotation
             playerVelocity = gameObject.GetComponent<GetVelocity>().velocity;
@@ -32,6 +31,7 @@ public class BallController : MonoBehaviour
             rotation.x += playerVelocity;
             rotation.x += 180f;
             transform.rotation = rotation;
+            Debug.Log("COLLIDED");
         }
 
         // If the ball collides with the border

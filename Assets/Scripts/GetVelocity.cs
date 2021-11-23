@@ -5,6 +5,7 @@ using UnityEngine;
 public class GetVelocity : MonoBehaviour
 {
     #region Variables
+    [Header("Dont touch this")]
     public float velocity;
     float oldPos;
     float newPos;
@@ -21,7 +22,7 @@ public class GetVelocity : MonoBehaviour
     void Update()
     {
         newPos = transform.position.y;
-        velocity = oldPos - newPos;
+        velocity = (oldPos - newPos) * Time.deltaTime;
         oldPos = newPos;
     }
     #endregion
