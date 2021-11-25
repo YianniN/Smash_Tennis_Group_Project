@@ -315,20 +315,20 @@ MonoBehaviour:
   storyboard: {fileID: 1062348623}
   dialogueText: {fileID: 1291229827}
   preGameDialogue:
-  - I already know I'm going to win, so why don't you give up now?
-  - You're pretty good. Too bad I'm better!
-  - Good luck. Not that it'll help you!
-  - This'll be easy! I'm going all out!
+  - Good luck, may the best player win.
+  - Good luck, let's make this a fun match!
+  - I'm ready for this, are you?
+  - Nothing like a game of tennis to start the day. Good luck.
   winDialogue:
-  - Maybe you're better than I thought you were...
-  - I had bad luck! That's why you won!
-  - You got really lucky! It won't happen next time though!
-  - Damn it! Why did I mess up so much?
+  - Congrats, you did really well.
+  - Congrats, you got pretty lucky.
+  - Even if I didn't win, that was still fun.
+  - Damn I messed up a lot. Today's just not my day.
   loseDialogue:
-  - Looks like you need more practice!
-  - I knew I was gonna win! Too easy!
-  - Looks like all the good luck in the world couldn't have helped you!
-  - Wow you messed up a lot! I'm honestly surprised!
+  - You did pretty well. It wasn't enough though.
+  - That was a good match. You were a tough opponent.
+  - I can see you messed up quite a bit. Did you get enough sleep last night?
+  - It looks like today is a good day for me, starting off with an easy win and all.
   preGame: 0
   win: 0
   lose: 0
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba87e03ceed4df4fb4b29e5510da16e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 2
   ball: {fileID: 1934704660}
   player: {fileID: 154491574}
   ai: {fileID: 1917499776}
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 67084591981d1a2479e0635f16833395, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f2916a148e03fa418f62a9bb7b145dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1b572c43fb0951a42a4cd08789305f63, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3cb346c039ff0743a538c3956379eaf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1676,7 +1676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 67084591981d1a2479e0635f16833395, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f2916a148e03fa418f62a9bb7b145dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1836,9 +1836,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1934704663}
-  xSpeed: 2
-  ySpeed: 4
-  maxDistance: 5
+  xSpeed: 4
+  ySpeed: 5
+  maxDistance: 7
   canMove: 0
 --- !u!50 &1917499777
 Rigidbody2D:
@@ -1986,8 +1986,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ai: {fileID: 1917499776}
   startSpeed: 5
-  speedIncrement: 0.1
-  maxRandomRotationValue: 10
+  speedIncrement: 0.15
+  maxRandomRotationValue: 15
   gameManager: {fileID: 256731942}
 --- !u!58 &1934704661
 CircleCollider2D:

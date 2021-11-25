@@ -8,7 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 78638885444de4a4c8040c8cedb4570e
-  - enabled: 0
-    path: Assets/Scenes/test.unity
-    guid: fe4bc0fcd6319424fb7ecce6b44f91e7
+  - enabled: 1
+    path: Assets/Scenes/School.unity
+    guid: 0b7764d695f31b646b1ac83588888e32
+  - enabled: 1
+    path: Assets/Scenes/Regional.unity
+    guid: 411d6ef6595b2fe4abe7e66dd606673b
+  - enabled: 1
+    path: Assets/Scenes/Championship.unity
+    guid: bfb02867552b3514fb0c513b3b9cbdc9
   m_configObjects: {}
