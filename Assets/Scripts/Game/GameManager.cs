@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [Range(1, 4)]
     int level;
     [SerializeField]
+    PauseMenu pauseMenu;
+    [SerializeField]
     BallController ball;
     [SerializeField]
     PlayerController player;
@@ -37,7 +39,7 @@ public class GameManager : MonoBehaviour
     {
         if (wait)
         {
-            if (Input.anyKeyDown)
+            if (Input.anyKeyDown && PauseMenu.paused == false)
             {
                 wait = false;
 

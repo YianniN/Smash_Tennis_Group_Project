@@ -10,12 +10,14 @@ public class PlayerController : MonoBehaviour
     #region Variables
     [SerializeField]
     float speed;
+    Animator animator;
     Vector2 startPosition;
     #endregion
 
     #region Start
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         startPosition = transform.position;
     }
     #endregion
@@ -46,18 +48,18 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
-    // Heh couldve used inheritence so i dont have to copy and paste the same code to AIController.cs but eh
+    // Heh couldve used inheritence so i dont have to copy and paste the same code to AIController.cs but im too lazy
     #region Forehand
     public void Forehand()
     {
-
+        animator.SetTrigger("Forehand");
     }
     #endregion
 
     #region Backhand
     public void Backhand()
     {
-
+        animator.SetTrigger("Backhand");
     }
     #endregion
 }

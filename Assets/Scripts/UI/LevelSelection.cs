@@ -21,7 +21,7 @@ public class LevelSelection : MonoBehaviour
     #region Start
     private void Start()
     {
-        PlayerPrefs.GetInt("progress", 0);
+        progress = PlayerPrefs.GetInt("progress", 0);
         // Disables all the buttons for levels
         for (int i = 0; i < levels.Length; i++)
         {

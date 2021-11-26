@@ -56,7 +56,7 @@ public class Dialogue : MonoBehaviour
             }
 
             // Go to next dialogue
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && PauseMenu.paused == false)
             {
                 Time.timeScale = 1;
                 storyboard.SetActive(false);

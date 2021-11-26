@@ -11,6 +11,8 @@ public class BallController : MonoBehaviour
     [SerializeField]
     AIController ai;
     [SerializeField]
+    PlayerController player;
+    [SerializeField]
     float startSpeed;
     [SerializeField]
     [Range(0f, 0.5f)]
@@ -66,6 +68,18 @@ public class BallController : MonoBehaviour
             rotationValue += Random.Range(-20, 20);
             rotationValue += 180;
             transform.rotation = Quaternion.Euler(0, 0, rotationValue);
+
+            // Player animation
+            rotationValue = transform.rotation.z;
+
+            if (rotationValue >= 0f)
+            {
+                player.Forehand();
+            }
+            else
+            {
+                player.Backhand();
+            }
         }
         else if (collision.gameObject.tag == "AI")
         {
@@ -77,6 +91,18 @@ public class BallController : MonoBehaviour
             rotationValue += Random.Range(-maxRandomRotationValue, maxRandomRotationValue);
             rotationValue += 180;
             transform.rotation = Quaternion.Euler(0, 0, rotationValue);
+
+            // AI animation
+            rotationValue = transform.rotation.z;
+
+            if (rotationValue >= 0f)
+            {
+                ai.Backhand();
+            }
+            else
+            {
+                ai.Forehand();
+            }
         }
         speed += speedIncrement;
 

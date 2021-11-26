@@ -20,6 +20,7 @@ public class AIController : MonoBehaviour
     [Range(0f, 10f)]
     float maxDistance;
     public bool canMove;
+    Animator animator;
     Vector2 ballDirection;
     Vector2 startPosition;
     #endregion
@@ -27,6 +28,7 @@ public class AIController : MonoBehaviour
     #region Start
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         startPosition = transform.position;
     }
     #endregion
@@ -99,6 +101,21 @@ public class AIController : MonoBehaviour
     {
         canMove = true;
         transform.position = startPosition;
+    }
+    #endregion
+
+    // Heh couldve used inheritence so i dont have to copy and paste the same code to AIController.cs but im too lazy
+    #region Forehand
+    public void Forehand()
+    {
+        animator.SetTrigger("Forehand");
+    }
+    #endregion
+
+    #region Backhand
+    public void Backhand()
+    {
+        animator.SetTrigger("Backhand");
     }
     #endregion
 }
